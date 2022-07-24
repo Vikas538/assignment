@@ -1,0 +1,75 @@
+
+Get http://localhost:3000/
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "username": "vikas",
+    "password" : "vikas"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "vikas",
+    "password" : "vikas",
+    "movie_date": "2022-10-01",
+    "movie_name" : "black Widow",
+    "movie_time" : "10:00:00",
+    "price" : 700
+}
+
+###
+
+POST  http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa2FzIiwicGFzc3dvcmQiOiIkMmIkMTAkVklDVEhhUGZWQWl0ZzNjbWtzVmUzT0k5YmprTnlzN2xDYjdyL2pyVVlKc0xKeXFlNEVKV08iLCJpYXQiOjE2NTg2MzA5Njd9.yEmoS0pKhJzfcWt3JqWeZpMlk-kzw2nxbTnGCsWTDqA
+Content-Type: application/json
+
+{
+    "username" : "vikas",
+}
+
+###
+POST http://localhost:3000/saveTickets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa2FzIiwicGFzc3dvcmQiOiIkMmIkMTAkVklDVEhhUGZWQWl0ZzNjbWtzVmUzT0k5YmprTnlzN2xDYjdyL2pyVVlKc0xKeXFlNEVKV08iLCJpYXQiOjE2NTg2MzA5Njd9.yEmoS0pKhJzfcWt3JqWeZpMlk-kzw2nxbTnGCsWTDqA
+Content-Type: application/json
+
+{
+  "username": "vikas",
+  "movie_date": "2022-10-01",
+  "movie_name": "black Widow",
+  "movie_time": "10:00:00",
+  "price": 200
+}
+
+###
+
+
+GET http://localhost:3000/getTickets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa2FzIiwicGFzc3dvcmQiOiIkMmIkMTAkVklDVEhhUGZWQWl0ZzNjbWtzVmUzT0k5YmprTnlzN2xDYjdyL2pyVVlKc0xKeXFlNEVKV08iLCJpYXQiOjE2NTg2MzA5Njd9.yEmoS0pKhJzfcWt3JqWeZpMlk-kzw2nxbTnGCsWTDqA
+Content-Type: application/json
+
+{
+  "username": "vikas",
+  "movie_date": "2022-10-01"
+}
+
+###
+
+DELETE http://localhost:3000/deleteTickets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpa2FzIiwicGFzc3dvcmQiOiIkMmIkMTAkVklDVEhhUGZWQWl0ZzNjbWtzVmUzT0k5YmprTnlzN2xDYjdyL2pyVVlKc0xKeXFlNEVKV08iLCJpYXQiOjE2NTg2MzA5Njd9.yEmoS0pKhJzfcWt3JqWeZpMlk-kzw2nxbTnGCsWTDqA
+Content-Type: application/json
+
+{
+ [
+    { 
+        "username": "vikas",
+        "movie_name": "black widow"
+    }
+ ]  
+}
